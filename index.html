@@ -481,3 +481,486 @@
     <script src="script.js"></script>
   </body>
 </html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>康镜智顾｜大健康舌象营养观察服务台</title>
+    <meta
+      name="description"
+      content="康镜智顾是面向大健康营养服务的舌象记录、图片质量评估与AI深度报告工具。"
+    />
+    <meta name="theme-color" content="#08765f" />
+    <meta name="apple-mobile-web-app-title" content="康镜智顾" />
+    <link rel="icon" type="image/svg+xml" href="assets/kangjing-icon.svg" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="康镜智顾">
+        <span class="brand-symbol" aria-hidden="true">
+          <span></span>
+        </span>
+        <span>
+          <strong>康镜智顾</strong>
+          <em>舌象记录 · 代谢沟通 · 客户随访</em>
+        </span>
+      </a>
+      <span class="model-pill" id="modelBadge">大模型待配置</span>
+    </header>
+
+    <main id="top">
+      <section class="workbench" aria-labelledby="pageTitle">
+        <div class="intro-panel">
+          <p class="section-kicker">Professional Nutrition Observation</p>
+          <h1 id="pageTitle">把舌象记录，转成客户听得懂的营养沟通。</h1>
+          <p class="lead">
+            从图片清晰度、光线、色调和拍摄完整度入手，结合饮食、排便、睡眠和作息记录，形成稳妥、清楚、可复盘的大健康服务参考。
+          </p>
+
+          <div class="quick-steps" aria-label="使用步骤">
+            <div>
+              <span>1</span>
+              <strong>拍照上传</strong>
+            </div>
+            <div>
+              <span>2</span>
+              <strong>补充状态</strong>
+            </div>
+            <div>
+              <span>3</span>
+              <strong>生成报告</strong>
+            </div>
+          </div>
+
+          <div class="service-tags" aria-label="服务重点">
+            <span>肠道代谢沟通</span>
+            <span>营养调理建议</span>
+            <span>客户随访记录</span>
+          </div>
+
+          <div class="observation-visual" aria-label="舌象营养观察流程示意">
+            <div class="visual-phone">
+              <div class="phone-speaker"></div>
+              <div class="tongue-shot">
+                <span class="tongue-shape"></span>
+                <span class="focus-line focus-line-a"></span>
+                <span class="focus-line focus-line-b"></span>
+              </div>
+              <div class="mini-bars" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="visual-report">
+              <strong>观察摘要</strong>
+              <div>
+                <span>清晰度</span>
+                <em>86</em>
+              </div>
+              <div>
+                <span>光线</span>
+                <em>较均匀</em>
+              </div>
+              <div>
+                <span>建议</span>
+                <em>补充日常记录</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="capture-panel" aria-labelledby="captureTitle">
+          <div class="panel-heading">
+            <p class="section-kicker">Step 01</p>
+            <h2 id="captureTitle">上传客户舌象图片</h2>
+            <p>建议上传舌面、舌根、舌下不同角度，最多保留3张。图片只在当前浏览器处理。</p>
+          </div>
+
+          <div class="shooting-guide" aria-label="拍摄样例">
+            <article class="guide-card guide-good">
+              <div class="guide-visual" aria-hidden="true">
+                <span class="sample-tongue"></span>
+              </div>
+              <div>
+                <strong>合格样例</strong>
+                <p>舌面完整、白光均匀、没有滤镜，能看清舌苔分布。</p>
+              </div>
+            </article>
+            <article class="guide-card guide-warning">
+              <div class="guide-visual is-dim" aria-hidden="true">
+                <span class="sample-tongue"></span>
+              </div>
+              <div>
+                <strong>不建议</strong>
+                <p>偏暗、强阴影、暖黄灯，会影响观察和客户理解。</p>
+              </div>
+            </article>
+            <article class="guide-card guide-warning">
+              <div class="guide-visual is-cropped" aria-hidden="true">
+                <span class="sample-tongue"></span>
+              </div>
+              <div>
+                <strong>需要重拍</strong>
+                <p>舌头没伸全、画面太近、明显模糊或使用美颜滤镜。</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="upload-actions" aria-label="上传方式">
+            <label class="action-button action-primary" for="tongueCamera">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.5 8.5A3.5 3.5 0 0 1 8 5h8a3.5 3.5 0 0 1 3.5 3.5v7A3.5 3.5 0 0 1 16 19H8a3.5 3.5 0 0 1-3.5-3.5z" />
+                <path d="M9 12a3 3 0 1 0 6 0 3 3 0 0 0-6 0z" />
+                <path d="M16.8 8.1h.01" />
+              </svg>
+              <span>拍照上传</span>
+              <input id="tongueCamera" class="tongue-file-input" type="file" accept="image/*" capture="environment" />
+            </label>
+            <label class="action-button" for="tongueAlbum">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 15V4" />
+                <path d="m7.5 8.5 4.5-4.5 4.5 4.5" />
+                <path d="M5 16.5v1.2A2.3 2.3 0 0 0 7.3 20h9.4a2.3 2.3 0 0 0 2.3-2.3v-1.2" />
+              </svg>
+              <span>相册选择</span>
+              <input id="tongueAlbum" class="tongue-file-input" type="file" accept="image/*" multiple />
+            </label>
+          </div>
+
+          <div class="upload-note">
+            <span id="selectedFileName">已选择 0/3 张</span>
+            <button id="startScan" class="text-button" type="button">查看演示报告</button>
+          </div>
+
+          <div class="privacy-note">
+            <strong>隐私说明</strong>
+            <p>图片会在当前浏览器先做质量评估；只有点击“生成AI深度报告”且已配置大模型接口时，才会发送给模型服务。</p>
+          </div>
+
+          <div class="upload-preview" id="tonguePreview" hidden>
+            <div class="preview-header">
+              <strong>图片预览</strong>
+              <button class="text-button" id="clearTongueImages" type="button">清空重选</button>
+            </div>
+            <div class="preview-grid" id="tonguePreviewGrid" aria-label="已上传图片"></div>
+          </div>
+        </section>
+
+        <section class="intake-panel" aria-labelledby="intakeTitle">
+          <div class="panel-heading">
+            <p class="section-kicker">Step 02</p>
+            <h2 id="intakeTitle">补充日常状态</h2>
+            <p>舌象只是一条线索，结合饮食、排便、睡眠和压力，报告才更像真实服务。</p>
+          </div>
+
+          <p class="form-tip">填得越完整，报告越贴近日常状态；不确定的项目可以先跳过。</p>
+
+          <form class="intake-form" id="intakeForm">
+            <label class="field">
+              <span>客户称呼</span>
+              <input id="customerName" name="customerName" type="text" placeholder="例如：王女士" />
+            </label>
+            <label class="field">
+              <span>客户编号</span>
+              <input id="customerCode" name="customerCode" type="text" placeholder="自动生成或手动填写" />
+            </label>
+            <label class="field">
+              <span>年龄段</span>
+              <select id="ageGroup" name="ageGroup">
+                <option value="">未填写</option>
+                <option>18-30岁</option>
+                <option>31-45岁</option>
+                <option>46-60岁</option>
+                <option>60岁以上</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>睡眠状态</span>
+              <select id="sleepQuality" name="sleepQuality">
+                <option value="">未填写</option>
+                <option>入睡顺利，醒后精神尚可</option>
+                <option>入睡慢或容易醒</option>
+                <option>经常熬夜，醒后疲惫</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>排便情况</span>
+              <select id="bowelStatus" name="bowelStatus">
+                <option value="">未填写</option>
+                <option>基本每日规律</option>
+                <option>偏干或费力</option>
+                <option>偏稀或不成形</option>
+                <option>不规律</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>饮水量</span>
+              <select id="waterIntake" name="waterIntake">
+                <option value="">未填写</option>
+                <option>偏少，少于1000ml</option>
+                <option>一般，约1000-1500ml</option>
+                <option>较好，1500ml以上</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>饮食特点</span>
+              <select id="dietPreference" name="dietPreference">
+                <option value="">未填写</option>
+                <option>规律清淡</option>
+                <option>油腻偏多</option>
+                <option>甜食/精制碳水偏多</option>
+                <option>外食或夜宵较多</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>近期压力</span>
+              <select id="stressLevel" name="stressLevel">
+                <option value="">未填写</option>
+                <option>较低</option>
+                <option>一般</option>
+                <option>较高，容易紧张或疲惫</option>
+              </select>
+            </label>
+            <label class="field field-wide">
+              <span>客户补充</span>
+              <textarea id="customerNotes" name="customerNotes" rows="3" placeholder="例如：餐后胀、口干、近期熬夜、运动少等"></textarea>
+            </label>
+          </form>
+        </section>
+
+        <section class="report-panel" aria-labelledby="reportTitle">
+          <div class="panel-heading">
+            <p class="section-kicker">Step 03</p>
+            <h2 id="reportTitle">客户观察摘要</h2>
+            <p id="reportStatus">等待上传图片</p>
+          </div>
+
+          <div class="score-row">
+            <div class="score-box">
+              <span>综合分</span>
+              <strong id="reportScoreValue">--</strong>
+              <em id="reportScoreLabel">待生成</em>
+            </div>
+            <p class="report-summary" id="reportSummary">
+              上传图片后，系统会先判断图片清晰度、光线和色调，再生成客户可读的营养沟通参考。
+            </p>
+          </div>
+
+          <div class="report-kpis">
+            <div>
+              <span>图片</span>
+              <strong id="reportImageCount">0/3</strong>
+            </div>
+            <div>
+              <span>清晰</span>
+              <strong id="reportQuality">--</strong>
+            </div>
+            <div>
+              <span>光线</span>
+              <strong id="reportLight">--</strong>
+            </div>
+            <div>
+              <span>色调</span>
+              <strong id="reportTone">--</strong>
+            </div>
+          </div>
+
+          <div class="report-suggestions" id="reportSuggestions">
+            <p>先上传2-3张清晰图片，报告会更完整。</p>
+          </div>
+
+          <div class="model-progress" id="modelProgress" aria-label="AI生成进度">
+            <span data-step="prepare">整理资料</span>
+            <span data-step="upload">提交模型</span>
+            <span data-step="generate">生成报告</span>
+          </div>
+
+          <button class="model-button" id="generateAiReport" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v18" />
+              <path d="M5 8h14" />
+              <path d="M7 16h10" />
+            </svg>
+            <span>生成AI深度报告</span>
+          </button>
+          <p class="model-helper">
+            将结合舌象图片、睡眠、饮食、排便、压力和顾问备注，生成客户版与顾问版报告。有顾问备注可先填写，报告会更完整。
+          </p>
+        </section>
+      </section>
+
+      <section class="model-report-panel" id="modelReportPanel" hidden aria-labelledby="modelReportTitle">
+        <div class="model-report-header">
+          <div>
+            <p class="section-kicker">AI Deep Report</p>
+            <h2 id="modelReportTitle">AI深度报告</h2>
+          </div>
+          <span id="modelReportStatus">等待生成</span>
+        </div>
+        <div class="report-cover" id="reportCover" hidden>
+          <div>
+            <span>客户</span>
+            <strong id="coverCustomerName">未命名客户</strong>
+          </div>
+          <div>
+            <span>客户编号</span>
+            <strong id="coverCustomerCode">--</strong>
+          </div>
+          <div>
+            <span>生成时间</span>
+            <strong id="coverGeneratedAt">--</strong>
+          </div>
+          <div>
+            <span>观察次数</span>
+            <strong id="coverObservationCount">--</strong>
+          </div>
+          <div>
+            <span>下次随访</span>
+            <strong id="coverFollowUp">未设置</strong>
+          </div>
+        </div>
+        <div class="report-toolbar">
+          <div class="report-tabs" role="tablist" aria-label="报告版本">
+            <button class="is-active" type="button" data-report-view="customer">客户简明版</button>
+            <button type="button" data-report-view="advisor">顾问专业版</button>
+          </div>
+          <div class="report-actions">
+            <button class="text-button" id="copyReport" type="button">复制报告</button>
+            <button class="text-button" id="shareReport" type="button">分享</button>
+            <button class="text-button" id="printReport" type="button">打印/PDF</button>
+          </div>
+        </div>
+        <div class="structured-report" id="customerReportView"></div>
+        <div class="structured-report" id="advisorReportView" hidden></div>
+        <pre class="raw-report" id="modelReportContent" hidden>上传舌象图片后，点击“生成AI深度报告”。</pre>
+      </section>
+
+      <section class="history-section" aria-labelledby="historyTitle">
+        <div class="section-title">
+          <p class="section-kicker">Local History</p>
+          <h2 id="historyTitle">本地历史记录</h2>
+          <p>最近生成的报告会保存在当前浏览器，便于下次复盘；清理浏览器数据后记录会消失。</p>
+        </div>
+        <div class="history-list" id="reportHistoryList">
+          <p class="empty-history">暂无历史报告。</p>
+        </div>
+        <button class="text-button danger-action" id="clearHistory" type="button">清空本地历史</button>
+      </section>
+
+      <section class="workflow-section" aria-labelledby="workflowTitle">
+        <div class="section-title">
+          <p class="section-kicker">Service Follow-up</p>
+          <h2 id="workflowTitle">顾问服务闭环</h2>
+          <p>记录本次沟通重点和下次随访时间，让这份报告变成可持续服务的一部分。</p>
+        </div>
+        <form class="workflow-form" id="workflowForm">
+          <label class="field">
+            <span>服务顾问</span>
+            <input id="advisorName" name="advisorName" type="text" placeholder="例如：李顾问" />
+          </label>
+          <label class="field">
+            <span>下次随访日期</span>
+            <input id="followUpDate" name="followUpDate" type="date" />
+          </label>
+          <label class="field field-wide">
+            <span>本次沟通记录</span>
+            <textarea id="sessionNotes" name="sessionNotes" rows="3" placeholder="例如：客户近期晚睡、外食多，先从饮水和晚餐结构开始调整。"></textarea>
+          </label>
+        </form>
+      </section>
+
+      <section class="framework-section" aria-labelledby="frameworkTitle">
+        <div class="section-title">
+          <p class="section-kicker">20年大健康服务视角</p>
+          <h2 id="frameworkTitle">看得懂，才愿意配合调理</h2>
+          <p>
+            舌象不是单点判断，而是一次沟通入口。专业服务要把观察转成客户能执行的生活方式建议。
+          </p>
+        </div>
+        <div class="framework-grid">
+          <article>
+            <span>01</span>
+            <h3>先看照片质量</h3>
+            <p>判断清晰、光线、角度，避免因为拍摄问题影响客户理解。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>再看日常状态</h3>
+            <p>同步记录饮食、饮水、排便、睡眠和餐后感受，形成完整背景。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>只做营养沟通</h3>
+            <p>报告用于大健康服务参考，不作诊断、治疗、用药或疾病判断。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>持续随访复盘</h3>
+            <p>固定同一时间、同一光线复拍，用趋势帮助客户看到变化。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="method-section" aria-labelledby="methodTitle">
+        <div class="section-title">
+          <p class="section-kicker">Standard Shooting Method</p>
+          <h2 id="methodTitle">标准拍摄方法</h2>
+        </div>
+        <div class="method-list">
+          <article>
+            <strong>01</strong>
+            <div>
+              <h3>使用手机后置镜头</h3>
+              <p>保持画面清晰、镜头干净，尽量每次用同一时间、同一光线做记录。</p>
+            </div>
+          </article>
+          <article>
+            <strong>02</strong>
+            <div>
+              <h3>选对时间</h3>
+              <p>建议早起后、刷牙和进食前观察；白天观察时，避开咖啡、茶、深色食物后立即拍摄。</p>
+            </div>
+          </article>
+          <article>
+            <strong>03</strong>
+            <div>
+              <h3>光线要白、要稳</h3>
+              <p>优先自然光或稳定白光，避免暖黄灯、强闪光、美颜滤镜和明显阴影。</p>
+            </div>
+          </article>
+          <article>
+            <strong>04</strong>
+            <div>
+              <h3>自然伸舌</h3>
+              <p>舌头自然平伸，放松不卷舌，不要用力过久；从舌尖到舌根尽量完整入镜。</p>
+            </div>
+          </article>
+          <article>
+            <strong>05</strong>
+            <div>
+              <h3>拍摄距离</h3>
+              <p>手机与口部约一掌距离，镜头尽量正对舌面，拍2-3张后选择最清晰的记录。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="boundary-section" aria-labelledby="boundaryTitle">
+        <div>
+          <p class="section-kicker">Service Boundary</p>
+          <h2 id="boundaryTitle">专业边界要说清楚</h2>
+        </div>
+        <p>
+          本工具用于大健康营养服务沟通，不替代专业医疗诊断。如客户出现持续疼痛、出血、明显白斑、长期不适或其他异常表现，应建议其及时咨询专业人士。
+        </p>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
