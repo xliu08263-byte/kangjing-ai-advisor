@@ -1802,3 +1802,260 @@ main {
     line-height: 1.65;
   }
 }
+
+
+@media screen and (max-width: 620px) {
+    body {
+          padding-bottom: calc(94px + env(safe-area-inset-bottom));
+          background:
+                  radial-gradient(circle at 12vw -8vh, rgba(52, 224, 180, 0.2), transparent 34vh),
+                  radial-gradient(circle at 95vw 8vh, rgba(255, 125, 138, 0.14), transparent 30vh),
+                  linear-gradient(180deg, rgb(4, 16, 13) 0, rgb(7, 19, 16) 48%, rgb(5, 13, 11) 100%);
+    }
+
+  .topbar,
+    main {
+          width: calc(100vw - 20px);
+    }
+
+  .topbar {
+        min-height: 58px;
+        padding: 8px 0;
+  }
+
+  .brand {
+        gap: 8px;
+  }
+
+  .brand-symbol {
+        flex-basis: 40px;
+        width: 40px;
+        height: 40px;
+  }
+
+  .brand strong {
+        font-size: 0.95rem;
+  }
+
+  .brand em,
+    .model-pill {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+    }
+
+  .brand em {
+        max-width: 11.5rem;
+        font-size: 0.68rem;
+  }
+
+  .model-pill {
+        max-width: 7.2rem;
+        padding: 7px 9px;
+        font-size: 0.7rem;
+  }
+
+  main {
+        padding: 12px 0 18px;
+  }
+
+  .workbench {
+        gap: 10px;
+  }
+
+  .intro-panel,
+    .capture-panel,
+    .intake-panel,
+    .report-panel,
+    .model-report-panel,
+    .history-section,
+    .framework-section,
+    .method-section,
+    .boundary-section {
+          padding: 14px;
+    }
+
+  .intro-panel {
+        gap: 12px;
+        padding: 16px;
+        background:
+                linear-gradient(180deg, rgba(12, 27, 23, 0.96), rgba(7, 17, 14, 0.98)),
+                var(--surface);
+  }
+
+  .intro-panel h1 {
+        max-width: 8.5em;
+        font-size: 2.34rem;
+        line-height: 1.03;
+  }
+
+  .lead {
+        font-size: 0.9rem;
+        line-height: 1.62;
+  }
+
+  .section-kicker {
+        padding: 5px 10px;
+        font-size: 0.68rem;
+  }
+
+  .observation-visual,
+    .score-row,
+    .intake-form,
+    .workflow-form,
+    .report-cover,
+    .report-toolbar {
+          grid-template-columns: 1fr;
+    }
+
+  .observation-visual {
+        gap: 10px;
+        order: 0;
+  }
+
+  .hero-photo-card {
+        aspect-ratio: 4 / 3;
+        max-height: 270px;
+  }
+
+  .hero-photo-overlay {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        gap: 6px;
+  }
+
+  .hero-photo-overlay span {
+        padding: 6px 9px;
+        font-size: 0.68rem;
+  }
+
+  .visual-report {
+        gap: 8px;
+        padding: 12px;
+  }
+
+  .hero-stat-panel,
+    .report-kpis {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+  .quick-steps {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 7px;
+  }
+
+  .quick-steps div {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        min-height: 76px;
+        padding: 10px 6px;
+        text-align: center;
+  }
+
+  .quick-steps span {
+        width: 28px;
+        height: 28px;
+  }
+
+  .quick-steps strong,
+    .service-tags span {
+          font-size: 0.76rem;
+    }
+
+  .service-tags,
+    .shooting-guide {
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          scrollbar-width: none;
+    }
+
+  .service-tags::-webkit-scrollbar,
+    .shooting-guide::-webkit-scrollbar {
+          display: none;
+    }
+
+  .service-tags span {
+        flex: 0 0 auto;
+        padding: 7px 9px;
+  }
+
+  .capture-panel .upload-actions {
+        position: fixed;
+        right: 10px;
+        bottom: calc(10px + env(safe-area-inset-bottom));
+        left: 10px;
+        z-index: 20;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 8px;
+        border: 1px solid rgba(52, 224, 180, 0.18);
+        border-radius: 8px;
+        background: rgba(5, 14, 12, 0.92);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, 0.46);
+        backdrop-filter: blur(18px);
+  }
+
+  .capture-panel .action-button,
+    .model-button {
+          min-height: 52px;
+    }
+
+  .capture-panel .action-primary {
+        color: rgb(6, 17, 15);
+        background: linear-gradient(180deg, rgb(112, 241, 207), rgb(45, 224, 179));
+  }
+
+  .shooting-guide {
+        display: flex;
+        gap: 10px;
+        margin-inline: -14px;
+        padding: 0 14px 2px;
+        scroll-snap-type: x mandatory;
+  }
+
+  .guide-card {
+        flex: 0 0 72%;
+        scroll-snap-align: start;
+  }
+
+  .guide-visual {
+        min-height: 108px;
+  }
+
+  .panel-heading h2,
+    .section-title h2,
+    .model-report-header h2,
+    .boundary-section h2 {
+          font-size: 1.2rem;
+    }
+
+  .panel-heading p,
+    .section-title p,
+    .boundary-section p {
+          font-size: 0.82rem;
+          line-height: 1.55;
+    }
+
+  .field select,
+    .field input,
+    .field textarea {
+          min-height: 44px;
+          font-size: 0.84rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .brand em {
+          display: none;
+    }
+
+  .intro-panel h1 {
+        font-size: 2.05rem;
+  }
+
+  .model-pill {
+        max-width: 6.2rem;
+        font-size: 0.66rem;
+  }
+}
