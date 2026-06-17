@@ -31,10 +31,10 @@
     <main id="top">
       <section class="workbench" aria-labelledby="pageTitle">
         <div class="intro-panel">
-          <p class="section-kicker">Professional Nutrition Observation</p>
-          <h1 id="pageTitle">把舌象记录，转成客户听得懂的营养沟通。</h1>
+          <p class="section-kicker">AI舌象营养观察</p>
+          <h1 id="pageTitle">从舌象记录，<br />打开大健康随访入口</h1>
           <p class="lead">
-            从图片清晰度、光线、色调和拍摄完整度入手，结合饮食、排便、睡眠和作息记录，形成稳妥、清楚、可复盘的大健康服务参考。
+            以舌象图片为主线，结合睡眠、饮食、排便和作息，生成客户看得懂、顾问能复盘的健康沟通参考。
           </p>
 
           <div class="quick-steps" aria-label="使用步骤">
@@ -58,33 +58,32 @@
             <span>客户随访记录</span>
           </div>
 
-          <div class="observation-visual" aria-label="舌象营养观察流程示意">
-            <div class="visual-phone">
-              <div class="phone-speaker"></div>
-              <div class="tongue-shot">
-                <span class="tongue-shape"></span>
-                <span class="focus-line focus-line-a"></span>
-                <span class="focus-line focus-line-b"></span>
-              </div>
-              <div class="mini-bars" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="visual-report">
+          <div class="observation-visual" aria-label="舌象营养观察主视觉">
+            <figure class="hero-photo-card">
+              <img src="assets/kangjing-hero.svg" alt="康镜智顾舌象观察示范场景图" />
+              <figcaption class="hero-photo-overlay" aria-hidden="true">
+                <span>自然白光</span>
+                <span>手机后置镜头</span>
+                <span>顾问随访</span>
+              </figcaption>
+            </figure>
+            <div class="visual-report hero-stat-panel">
               <strong>观察摘要</strong>
               <div>
-                <span>清晰度</span>
+                <span>图片质检</span>
                 <em>86</em>
               </div>
               <div>
-                <span>光线</span>
-                <em>较均匀</em>
+                <span>光线状态</span>
+                <em>稳定白光</em>
               </div>
               <div>
-                <span>建议</span>
-                <em>补充日常记录</em>
+                <span>记录重点</span>
+                <em>睡眠 / 饮食 / 排便</em>
+              </div>
+              <div>
+                <span>交付形式</span>
+                <em>客户版 + 顾问版</em>
               </div>
             </div>
           </div>
@@ -99,8 +98,8 @@
 
           <div class="shooting-guide" aria-label="拍摄样例">
             <article class="guide-card guide-good">
-              <div class="guide-visual" aria-hidden="true">
-                <span class="sample-tongue"></span>
+              <div class="guide-visual guide-visual--photo" aria-hidden="true">
+                <img src="assets/kangjing-guide.svg" alt="" />
               </div>
               <div>
                 <strong>合格样例</strong>
@@ -108,8 +107,8 @@
               </div>
             </article>
             <article class="guide-card guide-warning">
-              <div class="guide-visual is-dim" aria-hidden="true">
-                <span class="sample-tongue"></span>
+              <div class="guide-visual guide-visual--photo is-dim" aria-hidden="true">
+                <img src="assets/kangjing-hero.svg" alt="" />
               </div>
               <div>
                 <strong>不建议</strong>
@@ -117,8 +116,8 @@
               </div>
             </article>
             <article class="guide-card guide-warning">
-              <div class="guide-visual is-cropped" aria-hidden="true">
-                <span class="sample-tongue"></span>
+              <div class="guide-visual guide-visual--photo is-cropped" aria-hidden="true">
+                <img src="assets/kangjing-guide.svg" alt="" />
               </div>
               <div>
                 <strong>需要重拍</strong>
@@ -308,6 +307,36 @@
             将结合舌象图片、睡眠、饮食、排便、压力和顾问备注，生成客户版与顾问版报告。有顾问备注可先填写，报告会更完整。
           </p>
         </section>
+      </section>
+
+      <section class="story-section" aria-labelledby="storyTitle">
+        <div class="story-media">
+          <img src="assets/kangjing-guide.svg" alt="康镜智顾拍摄示范横幅图" />
+          <div class="story-media-banner" aria-hidden="true">
+            标准示范 · 手机后置镜头 · 自然白光 · 舌面完整入镜
+          </div>
+        </div>
+        <div class="story-copy">
+          <p class="section-kicker">Visual Guide</p>
+          <h2 id="storyTitle">把一次拍摄，做成顾问和客户都看得懂的标准动作</h2>
+          <p>
+            固定时间、固定光线、固定角度，客户更容易照做，顾问更容易复盘。页面不是只讲概念，而是把“怎么拍、怎么记、怎么交付”直接摆出来。
+          </p>
+          <div class="story-points" aria-label="拍摄与交付重点">
+            <article>
+              <strong>01</strong>
+              <span>先看光线，再看清晰度。</span>
+            </article>
+            <article>
+              <strong>02</strong>
+              <span>客户状态先补上，报告更完整。</span>
+            </article>
+            <article>
+              <strong>03</strong>
+              <span>客户版讲行动，顾问版讲复盘。</span>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section class="model-report-panel" id="modelReportPanel" hidden aria-labelledby="modelReportTitle">
